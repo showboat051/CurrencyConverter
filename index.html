@@ -15,16 +15,16 @@
 
     <h3>Enter Your Amount Here</h3>
     <form action=""> <input type="text" placeholder="Enter Number Here" id="numberInput"></form>
-    <button id="convertButton" onclick=convertDollars()>Convert</button>
-    <div class="dropdown">
-        <button role="button" class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-          Dropdown button
+    <div class="dropdown" >
+        <button id="dropdownMenu" onchange="convertDollars()" role="button" class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Dropdown button
         </button>
-        <ul class="dropdown-menu">
-          <li><a class="dropdown-item" href="#">Pesos</a></li>
-          <li><a class="dropdown-item" href="#">Euros</a></li>
-          <li><a class="dropdown-item" href="#">Something else here</a></li>
+        <ul class="dropdown-menu" >
+            <li><a class="dropdown-item" value="Pesos" href="#">Pesos</a></li>
+            <li><a class="dropdown-item" href="#">Euros</a></li>
+            <li><a class="dropdown-item" href="#">Something else here</a></li>
         </ul>
+        <button id="convertButton" onclick=convertDollars()>Convert</button>
       </div>
 </body>
 
