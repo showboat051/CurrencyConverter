@@ -1,16 +1,16 @@
                             // Resources
 const numberInput = document.getElementById("numberInput");
 const convertButton = document.getElementById("convertButton");
-const dropdownMenu = document.getElementsByClassName("dropdown");
+const dropdownMenu = document.getElementsByClassName("dropdown-menu");
 
                             // Button Click
 convertButton.addEventListener( "click" , function (e) {
     e.preventDefault();
 })
 
-dropdownMenu.addEventListener("click" , function () {
-    e.preventDefault();
-})
+// dropdownMenu.addEventListener("click" , function () {
+//     e.preventDefault();
+// })
 
 
 function convertDollars () {
