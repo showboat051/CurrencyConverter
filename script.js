@@ -18,7 +18,8 @@ function convertDollars () {
     if (numberInput.value === "") {
         alert("You have to enter a number")
     } else {
-       console.log(numberInput.value);
+       let newPesos = numberInput.value * 18.34;
+       console.log("Your " + numberInput.value + " dollars is " + newPesos + " in Pesos!");
 }
 } // convertDollars()
 
