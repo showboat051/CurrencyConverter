@@ -23,8 +23,3 @@ function convertDollars () {
 }
 } // convertDollars()
 
-function currencyStorage (value) {
-    let moneyType = dropDownChoices.value;
-    console.log(moneyType);
-
-}
