@@ -44,24 +44,16 @@ function convertDollars (dropDownChoicesValue) {
                 let newPesos = numberInput.value * 18.34;
                 
                 // Creates new display for the converted amount
-                let newAmountDisplay = document.createElement("p")
-                let convertMessage = "You converted " + numberInput.value + " into " + newPesos + " in Pesos"
-                let fullMessage = document.createTextNode(convertMessage)
-                newAmountDisplay.appendChild(conversionMessage)
-                fullMessage.appendChild(convertMessage)
-                document.body.appendChild(convertMessage)
                 
-                break;
-
+                
                 // creates the statement for new dollar conversion
-                //  conversionMessage = "Your " + numberInput.value + " dollars is " + newPesos + " in Pesos!"
-                // console.log("Your " + numberInput.value + " dollars is " + newPesos + " in Pesos!");
+                conversionMessage = "Your " + numberInput.value + " dollars is " + newPesos + " in Pesos!"
+                console.log("Your " + numberInput.value + " dollars is " + newPesos + " in Pesos!");
+                break;
                 
                 case 'Canadian' :
                     let newCADollars = numberInput.value * 1.368;
                     
-                    newDollarAmount.appendChild(newDollarAmountValue);
-                    document.body.appendChild(newDollarAmount);
     
 
                     console.log("Your " + numberInput.value + " dollars is " + newCADollars + " in Canadian Dollars!");
