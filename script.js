@@ -32,15 +32,15 @@ function convertDollars (dropDownChoicesValue) {
     if (numberInput.value === "") {
         alert("You have to enter a number");
     } else {
-        let conversionMessage;
-        let newDollarAmount = document.createElement("P");
-        let newDollarAmountValue;
-        // let newDollarAmountValue = document.createTextNode(conversionMessage);
-        newDollarAmount.appendChild(newDollarAmountValue);
-        document.body.appendChild(newDollarAmount);
+      
        
         switch(dropDownChoicesValue) {
             case 'pesos':
+                let conversionMessage;
+                let newDollarAmount = document.createElement("P");
+                let newDollarAmountValue = document.createTextNode(conversionMessage);
+                newDollarAmount.appendChild(newDollarAmountValue);
+                document.body.appendChild(newDollarAmount);
                 
                 let newPesos = numberInput.value * 18.34;
                 
@@ -49,8 +49,9 @@ function convertDollars (dropDownChoicesValue) {
                 
                 // creates the statement for new dollar conversion
                 conversionMessage = "Your " + numberInput.value + " dollars is " + newPesos + " in Pesos!"
-                newDollarAmountValue.appendChild(conversionMessage);
-                newDollarAmountValue.innerHTML;
+                // newDollarAmountValue.appendChild(conversionMessage);
+                // newDollarAmountValue.innerHTML;
+                conversionMessage.innerHTML;
                 console.log("Your " + numberInput.value + " dollars is " + newPesos + " in Pesos!");
                 break;
                 
