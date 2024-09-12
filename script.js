@@ -10,23 +10,6 @@ convertButton.addEventListener( "click" , function (e) {
     e.preventDefault();
 })
 
-// dropdownMenu.addEventListener("click" , function () {
-//     e.preventDefault();
-// })
-
-
-// function convertDollars (dropDownChoicesValue) {
-//     if (numberInput.value === "") {
-//         alert("You have to enter a number")
-//     } else {
-//        let newPesos = numberInput.value * 18.34;
-//        let newCADollars = numberInput.value * 1.368;
-//        console.log(dropDownChoicesValue);
-//        console.log("Your " + numberInput.value + " dollars is " + newPesos + " in Pesos!");
-//        console.log("Your " + numberInput.value + " dollars is " + newCADollars + " in Canadian Dollars!");
-
-// }
-// } // convertDollars()
 
 function convertDollars (dropDownChoicesValue) {
     if (numberInput.value === "") {
@@ -47,11 +30,11 @@ function convertDollars (dropDownChoicesValue) {
                 
                 case 'Canadian' :
                     let newCADollars = numberInput.value * 1.368;
-                     conversionMessage = "Your " + numberInput.value + " dollars is " + newCADollars + " in Pesos!"
-                     newDollarAmount = document.createElement("P");
-                     newDollarAmountValue = document.createTextNode(conversionMessage);
-                    newDollarAmount.appendChild(newDollarAmountValue);
-                    document.body.appendChild(newDollarAmount);     
+                     let cadMessage = "Your " + numberInput.value + " dollars is " + newCADollars + " in Canadian Dollars!"
+                     let newCADAmount = document.createElement("P");
+                     let newCADAmountValue = document.createTextNode(cadMessage);
+                    newCADAmount.appendChild(newCADAmountValue);
+                    document.body.appendChild(newCADAmount);     
     
 
                     console.log("Your " + numberInput.value + " dollars is " + newCADollars + " in Canadian Dollars!");
