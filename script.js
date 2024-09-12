@@ -10,7 +10,7 @@ convertButton.addEventListener( "click" , function (e) {
     e.preventDefault();
 })
 
-
+// Converts the dollar amount
 function convertDollars (dropDownChoicesValue) {
     if (numberInput.value === "") {
         alert("You have to enter a number");
@@ -45,4 +45,27 @@ function convertDollars (dropDownChoicesValue) {
                     
                 } // end of if statement
             }// convertDollars()
+
+// Uses the API for the function
+            async function dollarCall (dropDownChoicesValue) {
+
+                const url = 'https://currency-converter5.p.rapidapi.com/currency/convert?format=json&from=AUD&to=CAD&amount=1&language=en';
+                const options = {
+                    method: 'GET',
+                    headers: {
+                        'x-rapidapi-key': 'fc171ca90fmsh4786f9f7d6594a2p12f96bjsn2e59fd4d2304',
+                        'x-rapidapi-host': 'currency-converter5.p.rapidapi.com'
+                    }
+                };
+
+                try {
+                    const response = await fetch(url, options);
+                    const result = await response.text();
+                    console.log(result);
+                } catch (error) {
+                    console.error(error);
+                }
+
+                
+            } // dollerCall ()
 
