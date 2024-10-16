@@ -91,6 +91,7 @@ function convertDollars (dropDownChoicesValue) {
             
             // API call
             fetch (`https://api.freecurrencyapi.com/v1/latest?apikey=${apiKey}`)
+           
             .then ( res => {
                 if(res.ok) {
                     return res.json()
@@ -101,4 +102,8 @@ function convertDollars (dropDownChoicesValue) {
             .then (data => {
                 console.log(data);
             })
+
+            console.log(data.object);
+
+
         }  // dollarCall()
