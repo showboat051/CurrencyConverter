@@ -100,10 +100,12 @@ function convertDollars (dropDownChoicesValue) {
                 }
             })
             .then (data => {
-                console.log(data);
-            })
+                console.log(data.data);
+                // for (i = 0; i < data.data.length; i ++) {
+                //     console.log(data);
+                // }
+            }) // END OF API CALL
 
-            console.log(data.object);
 
 
         }  // dollarCall()
