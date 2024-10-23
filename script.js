@@ -101,8 +101,12 @@ function convertDollars (dropDownChoicesValue) {
             })
             .then (data => {
                 // console.log(data);
-                console.log(Object.entries(data.data));
+                // console.log(Object.entries(data.data));
+                let pulledValue = Object.entries(data.data);
+                console.log(pulledValue.values());
                 console.log(dropDownChoicesValue);
+                let newAmount = dropDownChoicesValue * numberInput;
+                console.log(newAmount);
             }) // END OF API CALL
 
 
