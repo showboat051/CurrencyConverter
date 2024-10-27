@@ -112,7 +112,8 @@ function convertDollars (dropDownChoicesValue) {
                         // console.log(pulledKey);
                         let dataArray = Object.entries(data.data);
                         // let map1 = dataArray.map()
-                        console.log(dataArray);
+
+                        console.log(dataArray.at(-1));
                 console.log(dropDownChoicesValue);
             }) // END OF API CALL
 
