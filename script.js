@@ -100,20 +100,12 @@ function convertDollars (dropDownChoicesValue) {
                 }
             })
             .then (data => {
-                // // console.log(data);
-                // let pulledKey = Object.entries(data.data);
-                // for ( let value of Object.values(pulledKey)) {
-                    //     console.log(value + " for let loop");
-                    // }
-                    
-                    // Object.keys(data) .forEach((key) => {
-                        //     console.log(`Key: ${key} and Value: ${data [key]}`);
-                        // });
-                        // console.log(pulledKey);
                         let dataArray = Object.entries(data.data);
-                        // let map1 = dataArray.map()
+                            dataArray.forEach() 
 
-                        console.log(dataArray.at(-1));
+                        
+                        console.log(dataArray[0].at(0));
+                        console.log(dataArray[0].at(-1));
                 console.log(dropDownChoicesValue);
             }) // END OF API CALL
 
