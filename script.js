@@ -101,9 +101,10 @@ function convertDollars (dropDownChoicesValue) {
             })
             .then (data => {
                         let dataArray = Object.entries(data.data);
-                            dataArray.forEach() 
-
                         
+                            for (let i = 0; i < dataArray.length; i++) {
+                                console.log(i);
+                            }
                         console.log(dataArray[0].at(0));
                         console.log(dataArray[0].at(-1));
                 console.log(dropDownChoicesValue);
