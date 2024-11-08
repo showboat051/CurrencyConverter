@@ -85,7 +85,7 @@ function convertDollars (dropDownChoicesValue) {
         //         }
 
         //     } // dollarCall ()
-            // new functions 
+            
         function dollarCall (dropDownChoicesValue) {
             const apiKey = "fca_live_G4LewBblG08sWMH4vSHSSQ1Xfv3mPBhkVxFpQmzj"
             
@@ -101,12 +101,12 @@ function convertDollars (dropDownChoicesValue) {
             })
             .then (data => {
                         let dataArray = Object.entries(data.data);
-                        
-                            for (let i = 0; i < dataArray.length; i++) {
-                                console.log(i);
-                            }
+                        let data2 = Object.values(data.data)
+
+
                         console.log(dataArray[0].at(0));
                         console.log(dataArray[0].at(-1));
+
                 console.log(dropDownChoicesValue);
             }) // END OF API CALL
 
