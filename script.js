@@ -114,3 +114,26 @@ function convertDollars (dropDownChoicesValue) {
 
         }  // dollarCall()
 
+        function newDollarCall (dropDownChoicesValue) {
+            const apiKey = "086aadb25d6a6588c818f018"
+            
+            // API call
+            fetch (`https://v6.exchangerate-api.com/v6/${apiKey}/latest/${dropDownChoicesValue}`)
+           
+            .then ( res => {
+                if(res.ok) {
+                    return res.json()
+                } else {
+                    console.log ("didn't work")
+                }
+            })
+            .then (data => {
+
+                console.log(data);
+
+                console.log(dropDownChoicesValue);
+            }) // END OF API CALL
+
+
+
+        }  // newDollarCall()
