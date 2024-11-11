@@ -128,10 +128,17 @@ function convertDollars (dropDownChoicesValue) {
                 }
             })
             .then (data => {
-
+                let currencyRates = data.conversion_rates;
+                let ratesArray = [];
                 console.log(data);
+                console.log(currencyRates);
+                for (let i = 0 ; i < currencyRates.length; i++) {
+                    console.log("the loop" + i);
+                    ratesArray.push(i)
+                    console.log(ratesArray);
+                }
 
-                console.log(dropDownChoicesValue);
+               
             }) // END OF API CALL
 
 
