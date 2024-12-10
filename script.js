@@ -84,7 +84,7 @@ function convertDollars (dropDownChoicesValue) {
         //             console.error(error);
         //         }
 
-        //     } // dollarCall ()
+        //     } // dollarCall (
             
         function dollarCall (dropDownChoicesValue) {
             const apiKey = "fca_live_G4LewBblG08sWMH4vSHSSQ1Xfv3mPBhkVxFpQmzj"
