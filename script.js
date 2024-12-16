@@ -46,73 +46,7 @@ function convertDollars (dropDownChoicesValue) {
                 } // end of if statement
             }// convertDollars()
 
-// Uses the API for the function
-            // async function dollarCall (dropDownChoicesValue) {
-
-            //     const url = 'https://currency-converter5.p.rapidapi.com/currency/convert?format=json&from=AUD&to=CAD&amount=1&language=en';
-            //     const options = {
-            //         method: 'GET',
-            //         headers: {
-            //             'x-rapidapi-key': 'fc171ca90fmsh4786f9f7d6594a2p12f96bjsn2e59fd4d2304',
-            //             'x-rapidapi-host': 'currency-converter5.p.rapidapi.com'
-            //         }
-            //     };
-
-            //     try {
-            //         const response = await fetch(url, options);
-            //         const result = await response.json();
-            //         console.log(result);
-            //     } catch (error) {
-            //         console.error(error);
-            //     }
-
-                
-            // } // dollarCall ()
-            // const apiKey = '602579c1367d0b3bbcf0ce2fd752afac';   
-
-        //    async function dollarCall (dropDownChoicesValue) {
-        //         const url ="https://api.freecurrencyapi.com/v1/latest?apikey=fca_live_G4LewBblG08sWMH4vSHSSQ1Xfv3mPBhkVxFpQmzj&currencies=EUR%2CUSD%2CCAD";
-        //         const options = {
-        //             method: "GET",
-        //         };
-                
-        //         try {
-        //             const response = await fetch(url, options);
-        //             const result = await response.json();
-        //             console.log(result);
-        //         } catch (error) {
-        //             console.error(error);
-        //         }
-
-        //     } // dollarCall (
             
-        function dollarCall (dropDownChoicesValue) {
-            const apiKey = "fca_live_G4LewBblG08sWMH4vSHSSQ1Xfv3mPBhkVxFpQmzj"
-            
-            // API call
-            fetch (`https://api.freecurrencyapi.com/v1/latest?apikey=${apiKey}`)
-           
-            .then ( res => {
-                if(res.ok) {
-                    return res.json()
-                } else {
-                    console.log ("didn't work")
-                }
-            })
-            .then (data => {
-                        let dataArray = Object.entries(data.data);
-                        let data2 = Object.values(data.data)
-
-
-                        console.log(dataArray[0].at(0));
-                        console.log(dataArray[0].at(-1));
-
-                console.log(dropDownChoicesValue);
-            }) // END OF API CALL
-
-
-
-        }  // dollarCall()
 
         function newDollarCall (dropDownChoicesValue) {
             const apiKey = "086aadb25d6a6588c818f018"
@@ -135,7 +69,6 @@ function convertDollars (dropDownChoicesValue) {
                 for (let i = 0 ; i < currencyRates.length; i++) {
                     console.log("the loop" + i);
                     ratesArray.push(i)
-                    console.log(ratesArray);
                 }
 
                
