@@ -5,6 +5,7 @@ const dropDownChoices = document.getElementById("dropDownChoices");
 const dropdownMenu = document.getElementById("dropdownMenu");
 const currencyInput = document.getElementById("currencyInput");
 const dropDownChoicesValue = dropDownChoices.value;
+const conversionMessage = document.getElementById("conversionMsg");
                             // Button Click
 convertButton.addEventListener( "click" , function (e) {
     e.preventDefault();
@@ -63,13 +64,9 @@ function convertDollars (dropDownChoicesValue) {
             })
             .then (data => {
                 let currencyRates = data.conversion_rates;
-                let ratesArray = [];
                 console.log(data);
                 console.log(currencyRates);
-                for (let i = 0 ; i < currencyRates.length; i++) {
-                    console.log("the loop" + i);
-                    ratesArray.push(i)
-                }
+               conversionMessage.innerHTML("Your" + numberInput + "dollars is now " + " in ")
 
                
             }) // END OF API CALL
