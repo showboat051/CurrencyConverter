@@ -28,9 +28,19 @@ function convertDollars (dropDownChoicesValue) {
                 document.body.appendChild(newDollarAmount);              
                 console.log("Your " + numberInput.value + " dollars is " + newPesos + " in Pesos!");
                 break;
+
+                case 'EUR':
+                    let newEuros = numberInput.value * 0.953;
+                    let EuroMessage = "Your " + numberInput.value + " dollars is " + newEuros + " in Euros!"
+                    let newEuroAmount = document.createElement("P");
+                    let newEuroAmountValue = document.createTextNode(EuroMessage);
+                    newEuroAmount.appendChild(newEuroAmountValue);
+                    document.body.appendChild(newEuroAmount);              
+                    console.log("Your " + numberInput.value + " dollars is " + newEuros + " in Pesos!");
+                    break;
                 
-                case 'Canadian' :
-                    let newCADollars = numberInput.value * 1.368;
+                case 'CAD' :
+                    let newCADollars = numberInput.value * 1.433;
                      let cadMessage = "Your " + numberInput.value + " dollars is " + newCADollars + " in Canadian Dollars!"
                      let newCADAmount = document.createElement("P");
                      let newCADAmountValue = document.createTextNode(cadMessage);
@@ -48,7 +58,7 @@ function convertDollars (dropDownChoicesValue) {
             }// convertDollars()
 
             
-
+                                    //API CALL
         function newDollarCall (dropDownChoicesValue) {
             const apiKey = "086aadb25d6a6588c818f018"
             
@@ -64,6 +74,12 @@ function convertDollars (dropDownChoicesValue) {
             })
             .then (data => {
                 let currencyRates = data.conversion_rates;
+
+                let allKeys = Object.keys(currencyRates);
+                console.log(allKeys)
+
+                
+
                 console.log(data);
                 console.log(currencyRates);
             //    conversionMessage.innerHTML("Your" + numberInput + "dollars is now " + " in ")
