@@ -75,9 +75,11 @@ function convertDollars (dropDownChoicesValue) {
             .then (data => {
                 let currencyRates = data.conversion_rates;
 
-                let allKeys = Object.keys(currencyRates);
-                console.log(allKeys)
+              let allKeys = Object.keys(currencyRates);
+              console.log(allKeys);
 
+              let allEntries = Object.entries(currencyRates)
+              console.log(allEntries);
                 
 
                 console.log(data);
