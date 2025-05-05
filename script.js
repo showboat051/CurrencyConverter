@@ -90,5 +90,5 @@ function convertDollars (dropDownChoicesValue) {
             }) // END OF API CALL
 
 
-
+            console.log(dropDownChoicesValue);
         }  // newDollarCall()
