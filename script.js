@@ -76,14 +76,15 @@ function convertDollars (dropDownChoicesValue) {
                 let currencyRates = data.conversion_rates;
 
               let allKeys = Object.keys(currencyRates);
-              console.log(allKeys);
+            //   console.log(allKeys);
 
-              let allEntries = Object.entries(currencyRates)
+              let allEntries = Object.values(currencyRates)
               console.log(allEntries);
                 
 
                 console.log(data);
-                console.log(currencyRates);
+                console.log(allEntries);
+                console.log(currencyRates.keys);
             //    conversionMessage.innerHTML("Your" + numberInput + "dollars is now " + " in ")
 
                
@@ -92,3 +93,4 @@ function convertDollars (dropDownChoicesValue) {
 
             console.log(dropDownChoicesValue);
         }  // newDollarCall()
+
