@@ -19,7 +19,7 @@ function convertDollars (dropDownChoicesValue) {
       
        
         switch(dropDownChoicesValue) {
-            case 'pesos':
+            case 'MEX':
                 let newPesos = numberInput.value * 18.34;
                 let conversionMessage = "Your " + numberInput.value + " dollars is " + newPesos + " in Pesos!"
                 let newDollarAmount = document.createElement("P");
@@ -76,15 +76,13 @@ function convertDollars (dropDownChoicesValue) {
                 let currencyRates = data.conversion_rates;
 
               let allKeys = Object.keys(currencyRates);
-            //   console.log(allKeys);
+              console.log(allKeys);
 
               let allEntries = Object.values(currencyRates)
               console.log(allEntries);
                 
 
                 console.log(data);
-                console.log(allEntries);
-                console.log(currencyRates.keys);
             //    conversionMessage.innerHTML("Your" + numberInput + "dollars is now " + " in ")
 
                
